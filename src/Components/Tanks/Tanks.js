@@ -28,7 +28,7 @@ const Tanks = (props) => {
     <div>
       <svg
         width="1280"
-        height="832"
+        height="700"
         viewBox="0 0 1280 832"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
