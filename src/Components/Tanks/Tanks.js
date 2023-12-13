@@ -3,6 +3,7 @@ import axios from "axios";
 import redOne from "../Assets/Images/redOne.svg";
 import redTwo from "../Assets/Images/redTwo.svg";
 import redThree from "../Assets/Images/redThree.svg";
+import redFour from "../Assets/Images/redFour.svg";
 const Tanks = (props) => {
   const [tankData, setTankData] = useState([]);
 
@@ -13,6 +14,7 @@ const Tanks = (props) => {
           "https://qa.dfos.co/bi-assets/1-hul/api/m_level_api.php"
         );
         console.log(response.data.data);
+
         setTankData(response.data.data);
       } catch (error) {
         console.error("Failed to fetch Tank Level:", error);
@@ -1379,22 +1381,43 @@ const Tanks = (props) => {
           </div>
         </foreignObject>
         <foreignObject x="560" y="315" width="52" height="52">
-          {tankData && tankData.length > 0 && tankData[0].HT1Level === 0 ? (
-            <img src={redOne} alt="red one" />
-          ) : null}
+          {tankData && tankData.HT1OnOff === "0.00" ? (
+            <img src={redOne} alt="red three" />
+          ) : (
+            (console.log("Condition not satisfied:", tankData, tankData.length),
+            null)
+          )}
         </foreignObject>
+
         <foreignObject x="619" y="315" width="52" height="52">
-          {tankData && tankData.length > 0 && tankData[0].HT2Level === 0 ? (
+          {tankData && tankData.HT2OnOff === "0.00" ? (
             <img src={redTwo} alt="red two" />
-          ) : null}
+          ) : (
+            (console.log("Condition not satisfied:", tankData, tankData.length),
+            null)
+          )}
         </foreignObject>
+
         <foreignObject x="679" y="315" width="52" height="52">
-          {tankData && tankData.length > 0 && tankData[0].HT3Level === 0 ? (
+          {tankData && tankData.HT3OnOff === "0.00" ? (
             <img src={redThree} alt="red three" />
-          ) : null}
+          ) : (
+            (console.log("Condition not satisfied:", tankData, tankData.length),
+            null)
+          )}
+        </foreignObject>
+        <foreignObject x="739" y="315" width="52" height="52">
+          {tankData && tankData.HT4OnOff === "0.00" ? (
+            <img src={redFour} alt="red four" />
+          ) : (
+            (console.log("Condition not satisfied:", tankData, tankData.length),
+            null)
+          )}
         </foreignObject>
       </svg>
     </div>
   );
 };
 export default Tanks;
+
+// x={619 + 59 * index}
