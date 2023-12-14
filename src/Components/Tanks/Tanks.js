@@ -4,6 +4,9 @@ import redOne from "../Assets/Images/redOne.svg";
 import redTwo from "../Assets/Images/redTwo.svg";
 import redThree from "../Assets/Images/redThree.svg";
 // import redFour from "../Assets/Images/redFour.svg";
+import "../Assets/CSS/Tank.css";
+import ProgressBar from "react-bootstrap/ProgressBar";
+
 const Tanks = (props) => {
   const [tankData, setTankData] = useState([]);
   const [progress, setProgress] = useState(0);
@@ -14,12 +17,13 @@ const Tanks = (props) => {
         const response = await axios.get(
           "https://qa.dfos.co/bi-assets/1-hul/api/m_level_api.php"
         );
-        await new Promise(resolve => setTimeout(resolve, 1000));
 
         console.log(response.data.data);
-          
+
         setTankData(response.data.data);
-        setProgress(response.data.data);
+        if (response.data && response.data.HT4Level !== undefined) {
+          setProgress(response.data.data.HT4Level);
+        }
       } catch (error) {
         console.error("Failed to fetch Tank Level:", error);
       }
@@ -226,78 +230,8 @@ const Tanks = (props) => {
           d="M362.001 356.895L370.661 341.895L353.341 341.895L362.001 356.895ZM360.5 277L360.501 343.395L363.501 343.395L363.5 277L360.5 277Z"
           fill="#00B050"
         />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="51"
-          transform="matrix(1 0 0 -1 281 476)"
-          fill="#00B050"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="44"
-          transform="matrix(1 0 0 -1 281 425)"
-          fill="#FFC000"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="51"
-          transform="matrix(1 0 0 -1 411 476)"
-          fill="#00B050"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="44"
-          transform="matrix(1 0 0 -1 411 425)"
-          fill="#FFC000"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="51"
-          transform="matrix(1 0 0 -1 903 476)"
-          fill="#00B050"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="44"
-          transform="matrix(1 0 0 -1 903 425)"
-          fill="#FFC000"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="51"
-          transform="matrix(1 0 0 -1 1033 476)"
-          fill="#00B050"
-          stroke="black"
-        />
-        <rect
-          x="0.5"
-          y="-0.5"
-          width="11"
-          height="44"
-          transform="matrix(1 0 0 -1 1033 425)"
-          fill="#FFC000"
-          stroke="black"
-        />
+ 
+     
         <rect
           x="0.5"
           y="-0.5"
@@ -1441,35 +1375,77 @@ const Tanks = (props) => {
           fill="#FFC000"
           stroke="black"
         ></rect>
-        <rect
-          x="-14"
-          y="-340"
-          width="12"
-          height="107"
-          transform="matrix(1 0 0 -1 295 140)"
-          fill="#FFC000"
-          stroke="black"
-        ></rect>
-        <rect
-          x="116"
-          y="-340"
-          width="12"
-          height="107"
-          transform="matrix(1 0 0 -1 295 140)"
-          fill="#FFC000"
-          stroke="black"
-        ></rect>
-        <rect
-          x="608"
-          y="-340"
-          width="12"
-          height="100"
-          transform="matrix(1 0 0 -1 295 140)"
-          fill="#FFC000"
-          stroke="black"
-        ></rect>
-        <rect  width={`${progress.HT4Level}%`} height="100%" style={{width: "12", height: "107"}} />
+
+        <rect width={`${progress}%`} height="50" fill="blue" />
+        {/* <text x="82%" y="50%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
+        {`${tankData.HT4Level}%`}
+      </text> */}
+        {/* {console.log(tankData.HT4Level)} */}
       </svg>
+      <ProgressBar
+        className="HT4Level"
+        now={tankData.HT4Level}
+        label={`${tankData.HT4Level}%`}
+        variant="#00B050"
+        style={{
+          height: "2%",
+          width: "8%",
+          position: "absolute",
+          top: "50%",
+          zIndex: "10",
+          left: "73%",
+          transform: "rotate(-90deg)",
+        }}
+        visuallyHidden
+      />
+      <ProgressBar
+        className="HT3Level"
+        now={tankData.HT3Level}
+        label={`${tankData.HT3Level}%`}
+        variant="#00B050"
+        style={{
+          height: "2%",
+          width: "8%",
+          position: "absolute",
+          top: "50%",
+          zIndex: "10",
+          left: "64%",
+          transform: "rotate(-90deg)",
+        }}
+        visuallyHidden
+      />
+      <ProgressBar
+        className="HT2Level"
+        now={tankData.HT2Level}
+        label={`${tankData.HT2Level}%`}
+        variant="#00B050"
+        style={{
+          height: "2%",
+          width: "8%",
+          position: "absolute",
+          top: "50%",
+          zIndex: "10",
+          left: "31.5%",
+          transform: "rotate(-90deg)",
+        }}
+        visuallyHidden
+      />
+      <ProgressBar
+        className="HT1Level"
+        now={tankData.HT1Level}
+        label={`${tankData.HT1Level}%`}
+        variant="#00B050"
+        style={{
+          height: "2%",
+          width: "8%",
+          position: "absolute",
+          top: "50%",
+          zIndex: "10",
+          left: "22.5%",
+          transform: "rotate(-90deg)",
+        }}
+        visuallyHidden
+      />
     </div>
   );
 };

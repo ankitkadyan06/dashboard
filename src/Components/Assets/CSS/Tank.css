@@ -1,0 +1,45 @@
+.progress {
+  --bs-progress-bg: #ffc000 !important;
+  --bs-progress-border-radius: 0px !important;
+  
+}
+
+.progress-bar {
+  --bs-progress-bar-bg: #00b050 !important;
+}
+
+@media (min-width: 1536px) {
+    .HT1Level {
+      left: 26% !important;
+    }
+
+    .HT2Level {
+        left: 33.5% !important;
+    }
+
+    .HT3Level {
+        left: 61.5% !important;
+    }
+
+    .HT4Level {
+        left: 69% !important;
+    }
+  }
+
+@media (min-width: 1920px) {
+    .HT1Level {
+      left: 30% !important;
+    }
+
+    .HT2Level {
+        left: 36% !important;
+    }
+
+    .HT3Level {
+        left: 58.5% !important;
+    }
+
+    .HT4Level {
+        left: 64.5% !important;
+    }
+  }
