@@ -10,36 +10,64 @@
 
 @media (min-width: 1536px) {
     .HT1Level {
-      left: 26% !important;
+      left: 26.5% !important;
+      width:  7% !important;
     }
 
     .HT2Level {
-        left: 33.5% !important;
+        left: 34% !important;
+        width:  7% !important;
     }
 
     .HT3Level {
         left: 61.5% !important;
+        width:  7% !important;
     }
 
     .HT4Level {
         left: 69% !important;
+        width:  7% !important;
+    }
+
+    .m1Level{
+        left: 27.5% !important;
+        width:  7% !important;
+    }
+    .m2Level{
+        left: 62% !important;
+        width:  7% !important;
     }
   }
 
 @media (min-width: 1920px) {
     .HT1Level {
-      left: 30% !important;
+      left: 30.5% !important;
+      width:  7% !important;
     }
 
     .HT2Level {
-        left: 36% !important;
+        left: 36.5% !important;
+        width:  7% !important;
     }
 
     .HT3Level {
-        left: 58.5% !important;
+        left: 59% !important;
+        width:  7% !important;
     }
 
     .HT4Level {
-        left: 64.5% !important;
+        left: 65% !important;
+        width:  7% !important;
     }
+
+    .m1Level{
+        left: 31% !important;
+        width:  7% !important;
+    }
+
+    .m2Level{
+        left: 59% !important;
+        width:  7% !important;
+    }
+    
   }
