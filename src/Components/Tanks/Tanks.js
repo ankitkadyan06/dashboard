@@ -6,6 +6,7 @@ import redThree from "../Assets/Images/redThree.svg";
 // import redFour from "../Assets/Images/redFour.svg";
 const Tanks = (props) => {
   const [tankData, setTankData] = useState([]);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,9 +14,12 @@ const Tanks = (props) => {
         const response = await axios.get(
           "https://qa.dfos.co/bi-assets/1-hul/api/m_level_api.php"
         );
-        console.log(response.data.data);
+        await new Promise(resolve => setTimeout(resolve, 1000));
 
+        console.log(response.data.data);
+          
         setTankData(response.data.data);
+        setProgress(response.data.data);
       } catch (error) {
         console.error("Failed to fetch Tank Level:", error);
       }
@@ -39,7 +43,7 @@ const Tanks = (props) => {
         <path d="M847 511.5V530" stroke="#DFD600" strokeWidth="3" />
         <path
           d="M846.5 653.005L855.16 638.005H837.84L846.5 653.005ZM845 598.995V639.505H848V598.995H845Z"
-          fill="#DFD600"
+          fill="#00B050"
         />
         <path
           d="M233.001 359.495L241.661 344.495L224.341 344.495L233.001 359.495ZM231.5 237L231.501 345.995L234.501 345.995L234.5 237L231.5 237Z"
@@ -551,14 +555,14 @@ const Tanks = (props) => {
           d="M225.368 274.878C225.291 274.878 225.217 274.893 225.146 274.922C225.074 274.951 225.012 274.994 224.957 275.048C224.902 275.103 224.861 275.166 224.831 275.237C224.802 275.307 224.787 275.382 224.787 275.459C224.787 275.536 224.802 275.61 224.831 275.681C224.861 275.752 224.902 275.815 224.957 275.869C225.012 275.924 225.074 275.966 225.146 275.995C225.217 276.025 225.291 276.04 225.368 276.04H241.831C241.908 276.04 241.983 276.025 242.053 275.995C242.124 275.966 242.187 275.924 242.242 275.869C242.296 275.815 242.339 275.752 242.368 275.681C242.397 275.61 242.412 275.536 242.412 275.459C242.412 275.382 242.397 275.307 242.368 275.237C242.339 275.166 242.296 275.103 242.242 275.048C242.187 274.994 242.124 274.951 242.053 274.922C241.983 274.893 241.908 274.878 241.831 274.878H225.368Z"
           fill="black"
         />
-        <path d="M842.998 275.754H981" stroke="#DFD600" strokeWidth="3" />
+        <path d="M842.998 275.754H981" stroke="#00B050" strokeWidth="3" />
         <path
           d="M846.001 360.495L854.661 345.495L837.341 345.495L846.001 360.495ZM844.5 238L844.501 346.995L847.501 346.995L847.5 238L844.5 238Z"
-          fill="#DFD600"
+          fill="#00B050"
         />
         <path
           d="M980.001 356.895L988.661 341.895L971.341 341.895L980.001 356.895ZM978.5 275L978.501 343.395L981.501 343.395L981.5 275L978.5 275Z"
-          fill="#DFD600"
+          fill="#00B050"
         />
         <path
           d="M824.141 264.796V257.917H827.766V264.739L824.141 264.796Z"
@@ -715,12 +719,12 @@ const Tanks = (props) => {
         <path d="M270 579H979" stroke="#00B050" strokeWidth="3" />
         <path
           d="M709 599V597.5H707.5V599H709ZM709 654L717.66 639H700.34L709 654ZM922 597.5H709V600.5H922V597.5ZM707.5 599V640.5H710.5V599H707.5Z"
-          fill="#DFD600"
+          fill="#00B050"
         />
-        <path d="M922 599V535.5H985V504" stroke="#DFD600" strokeWidth="3" />
+        <path d="M922 599V535.5H985V504" stroke="#00B050" strokeWidth="3" />
         <path
           d="M825.141 526.796V519.917H828.766V526.739L825.141 526.796Z"
-          fill="#FDDEA1"
+          fill="#00B050"
         />
         <path
           d="M814.666 533.707H822.057V538.915H814.695L814.666 533.707Z"
@@ -1464,15 +1468,7 @@ const Tanks = (props) => {
           fill="#FFC000"
           stroke="black"
         ></rect>
-        <rect
-          x="738"
-          y="-340"
-          width="12"
-          height="100"
-          transform="matrix(1 0 0 -1 295 140)"
-          fill="#FFC000"
-          stroke="black"
-        ></rect>
+        <rect  width={`${progress.HT4Level}%`} height="100%" style={{width: "12", height: "107"}} />
       </svg>
     </div>
   );
