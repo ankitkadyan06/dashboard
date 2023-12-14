@@ -1419,10 +1419,62 @@ const Tanks = (props) => {
             null)
           )}
         </foreignObject> */}
+        <rect
+          x="0.5"
+          y="-59"
+          width="12"
+          height="107"
+          transform="matrix(1 0 0 -1 295 140)"
+          fill="#FFC000"
+          stroke="black"
+        ></rect>
+        <rect
+          x="612.5"
+          y="-59"
+          width="12"
+          height="107"
+          transform="matrix(1 0 0 -1 295 140)"
+          fill="#FFC000"
+          stroke="black"
+        ></rect>
+        <rect
+          x="-14"
+          y="-340"
+          width="12"
+          height="107"
+          transform="matrix(1 0 0 -1 295 140)"
+          fill="#FFC000"
+          stroke="black"
+        ></rect>
+        <rect
+          x="116"
+          y="-340"
+          width="12"
+          height="107"
+          transform="matrix(1 0 0 -1 295 140)"
+          fill="#FFC000"
+          stroke="black"
+        ></rect>
+        <rect
+          x="608"
+          y="-340"
+          width="12"
+          height="100"
+          transform="matrix(1 0 0 -1 295 140)"
+          fill="#FFC000"
+          stroke="black"
+        ></rect>
+        <rect
+          x="738"
+          y="-340"
+          width="12"
+          height="100"
+          transform="matrix(1 0 0 -1 295 140)"
+          fill="#FFC000"
+          stroke="black"
+        ></rect>
       </svg>
     </div>
   );
 };
 export default Tanks;
-
-// x={619 + 59 * index}
