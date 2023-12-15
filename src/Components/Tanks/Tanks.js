@@ -12,26 +12,29 @@ const Tanks = (props) => {
   const [tankData, setTankData] = useState([]);
   const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://qa.dfos.co/bi-assets/1-hul/api/m_level_api.php"
-        );
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://qa.dfos.co/bi-assets/1-hul/api/m_level_api.php"
+      );
 
-        console.log(response.data.data);
+      console.log(response.data.data);
 
-        setTankData(response.data.data);
-        if (response.data && response.data.HT4Level !== undefined) {
-          setProgress(response.data.data.HT4Level);
-        }
-      } catch (error) {
-        console.error("Failed to fetch Tank Level:", error);
+      setTankData(response.data.data);
+      if (response.data && response.data.HT4Level !== undefined) {
+        setProgress(response.data.data.HT4Level);
       }
-    };
+    } catch (error) {
+      console.error("Failed to fetch Tank Level:", error);
+    }
+  };
 
-    fetchData();
-  }, []);
+  useEffect(() => {
+    const fetchDataInterval = setInterval(() => {
+      fetchData();
+    }, 5000);
+    return () => clearInterval(fetchDataInterval);
+  }, []); 
 
   return (
     <div className="mGFDash">
