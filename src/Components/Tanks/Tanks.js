@@ -4,6 +4,7 @@ import redOne from "../Assets/Images/redOne.svg";
 import redTwo from "../Assets/Images/redTwo.svg";
 import redThree from "../Assets/Images/redThree.svg";
 // import redFour from "../Assets/Images/redFour.svg";
+
 import "../Assets/CSS/Tank.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
@@ -33,10 +34,10 @@ const Tanks = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="mGFDash">
       <svg
-        width="100%"
-        height="99vh"
+      width="100%"
+      height="99vh"
         viewBox="0 0 1280 832"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -230,9 +231,7 @@ const Tanks = (props) => {
           d="M362.001 356.895L370.661 341.895L353.341 341.895L362.001 356.895ZM360.5 277L360.501 343.395L363.501 343.395L363.5 277L360.5 277Z"
           fill="#00B050"
         />
- 
-     
-        
+
         <path
           d="M535.578 70H539.125L543.875 81.5937H544.063L548.813 70H552.359V86H549.578V75.0078H549.43L545.008 85.9531H542.93L538.508 74.9844H538.359V86H535.578V70ZM558.414 70V86H555.516V70H558.414ZM563.975 70L567.498 75.8594H567.623L571.162 70H574.467L569.537 78L574.545 86H571.186L567.623 80.1797H567.498L563.936 86H560.592L565.646 78L560.654 70H563.975ZM576.742 86V70H587.148V72.4297H579.641V76.7734H586.609V79.2031H579.641V83.5703H587.211V86H576.742ZM590.105 86V70H596.105C597.335 70 598.366 70.2135 599.199 70.6406C600.038 71.0677 600.671 71.6667 601.098 72.4375C601.53 73.2031 601.746 74.0964 601.746 75.1172C601.746 76.1432 601.527 77.0339 601.09 77.7891C600.658 78.5391 600.02 79.1198 599.176 79.5312C598.332 79.9375 597.296 80.1406 596.066 80.1406H591.793V77.7344H595.676C596.395 77.7344 596.983 77.6354 597.441 77.4375C597.9 77.2344 598.238 76.9401 598.457 76.5547C598.681 76.1641 598.793 75.6849 598.793 75.1172C598.793 74.5495 598.681 74.0651 598.457 73.6641C598.233 73.2578 597.892 72.9505 597.434 72.7422C596.975 72.5286 596.384 72.4219 595.66 72.4219H593.004V86H590.105ZM598.371 78.75L602.332 86H599.098L595.207 78.75H598.371ZM618.566 74.3984C618.493 73.7161 618.186 73.1849 617.645 72.8047C617.108 72.4245 616.41 72.2344 615.551 72.2344C614.947 72.2344 614.428 72.3255 613.996 72.5078C613.564 72.6901 613.233 72.9375 613.004 73.25C612.775 73.5625 612.658 73.9193 612.652 74.3203C612.652 74.6536 612.728 74.9427 612.879 75.1875C613.035 75.4323 613.246 75.6406 613.512 75.8125C613.777 75.9792 614.072 76.1198 614.395 76.2344C614.717 76.349 615.043 76.4453 615.371 76.5234L616.871 76.8984C617.475 77.0391 618.056 77.2292 618.613 77.4687C619.176 77.7083 619.678 78.0104 620.121 78.375C620.569 78.7396 620.923 79.1797 621.184 79.6953C621.444 80.2109 621.574 80.8151 621.574 81.5078C621.574 82.4453 621.335 83.2708 620.855 83.9844C620.376 84.6927 619.684 85.2474 618.777 85.6484C617.876 86.0443 616.785 86.2422 615.504 86.2422C614.259 86.2422 613.178 86.0495 612.262 85.6641C611.35 85.2786 610.637 84.7161 610.121 83.9766C609.611 83.237 609.335 82.3359 609.293 81.2734H612.145C612.186 81.8307 612.358 82.2943 612.66 82.6641C612.962 83.0339 613.355 83.3099 613.84 83.4922C614.329 83.6745 614.876 83.7656 615.48 83.7656C616.111 83.7656 616.663 83.6719 617.137 83.4844C617.616 83.2917 617.991 83.026 618.262 82.6875C618.533 82.3437 618.671 81.9427 618.676 81.4844C618.671 81.0677 618.548 80.724 618.309 80.4531C618.069 80.1771 617.733 79.9479 617.301 79.7656C616.874 79.5781 616.374 79.4115 615.801 79.2656L613.98 78.7969C612.663 78.4583 611.621 77.9453 610.855 77.2578C610.095 76.5651 609.715 75.6458 609.715 74.5C609.715 73.5573 609.97 72.7318 610.48 72.0234C610.996 71.3151 611.697 70.7656 612.582 70.375C613.467 69.9792 614.47 69.7812 615.59 69.7812C616.725 69.7812 617.72 69.9792 618.574 70.375C619.434 70.7656 620.108 71.3099 620.598 72.0078C621.087 72.7005 621.34 73.4974 621.355 74.3984H618.566ZM623.455 72.4297V70H636.221V72.4297H631.275V86H628.4V72.4297H623.455ZM638.803 86H635.709L641.342 70H644.92L650.561 86H647.467L643.193 73.2812H643.068L638.803 86ZM638.904 79.7266H647.342V82.0547H638.904V79.7266ZM650.031 72.4297V70H662.797V72.4297H657.852V86H654.977V72.4297H650.031ZM675.344 70H678.242V80.4531C678.242 81.599 677.971 82.6068 677.43 83.4766C676.893 84.3464 676.138 85.026 675.164 85.5156C674.19 86 673.052 86.2422 671.75 86.2422C670.443 86.2422 669.302 86 668.328 85.5156C667.354 85.026 666.599 84.3464 666.063 83.4766C665.526 82.6068 665.258 81.599 665.258 80.4531V70H668.156V80.2109C668.156 80.8776 668.302 81.4714 668.594 81.9922C668.891 82.513 669.307 82.9219 669.844 83.2188C670.38 83.5104 671.016 83.6562 671.75 83.6562C672.484 83.6562 673.12 83.5104 673.656 83.2188C674.198 82.9219 674.615 82.513 674.906 81.9922C675.198 81.4714 675.344 80.8776 675.344 80.2109V70ZM690.088 74.3984C690.015 73.7161 689.708 73.1849 689.166 72.8047C688.63 72.4245 687.932 72.2344 687.072 72.2344C686.468 72.2344 685.95 72.3255 685.518 72.5078C685.085 72.6901 684.755 72.9375 684.525 73.25C684.296 73.5625 684.179 73.9193 684.174 74.3203C684.174 74.6536 684.249 74.9427 684.4 75.1875C684.557 75.4323 684.768 75.6406 685.033 75.8125C685.299 75.9792 685.593 76.1198 685.916 76.2344C686.239 76.349 686.564 76.4453 686.893 76.5234L688.393 76.8984C688.997 77.0391 689.577 77.2292 690.135 77.4687C690.697 77.7083 691.2 78.0104 691.643 78.375C692.09 78.7396 692.445 79.1797 692.705 79.6953C692.965 80.2109 693.096 80.8151 693.096 81.5078C693.096 82.4453 692.856 83.2708 692.377 83.9844C691.898 84.6927 691.205 85.2474 690.299 85.6484C689.398 86.0443 688.307 86.2422 687.025 86.2422C685.781 86.2422 684.7 86.0495 683.783 85.6641C682.872 85.2786 682.158 84.7161 681.643 83.9766C681.132 83.237 680.856 82.3359 680.814 81.2734H683.666C683.708 81.8307 683.88 82.2943 684.182 82.6641C684.484 83.0339 684.877 83.3099 685.361 83.4922C685.851 83.6745 686.398 83.7656 687.002 83.7656C687.632 83.7656 688.184 83.6719 688.658 83.4844C689.137 83.2917 689.512 83.026 689.783 82.6875C690.054 82.3437 690.192 81.9427 690.197 81.4844C690.192 81.0677 690.07 80.724 689.83 80.4531C689.59 80.1771 689.255 79.9479 688.822 79.7656C688.395 79.5781 687.895 79.4115 687.322 79.2656L685.502 78.7969C684.184 78.4583 683.143 77.9453 682.377 77.2578C681.617 76.5651 681.236 75.6458 681.236 74.5C681.236 73.5573 681.492 72.7318 682.002 72.0234C682.518 71.3151 683.218 70.7656 684.104 70.375C684.989 69.9792 685.992 69.7812 687.111 69.7812C688.247 69.7812 689.242 69.9792 690.096 70.375C690.955 70.7656 691.63 71.3099 692.119 72.0078C692.609 72.7005 692.861 73.4974 692.877 74.3984H690.088Z"
           fill="black"
@@ -1322,125 +1321,203 @@ const Tanks = (props) => {
             null)
           )}
         </foreignObject> */}
-        
+         <foreignObject x="16.5%" y="12%" width="100" height="100">
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column-reverse",
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <ProgressBar
+              now={(tankData.m1Level * 100) / 5820}
+              label={`${(tankData.m1Level * 100) / 5820}%`}
+              variant="success"
+              style={{
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: "0px",
+              }}
+              visuallyHidden
+            />
+          </div>
+        </foreignObject>
+        <foreignObject x="65%" y="12%" width="100" height="100">
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column-reverse",
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <ProgressBar
+              now={(tankData.m2Level * 100) / 5820}
+              label={`${(tankData.m2Level * 100) / 5820}%`}
+              variant="success"
+              style={{
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: "0px",
+              }}
+              visuallyHidden
+            />
+          </div>
+        </foreignObject>
+        <foreignObject x="15.5%" y="45%" width="100" height="100">
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column-reverse",
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <ProgressBar
+              now={tankData.HT1Level}
+              label={`${tankData.HT1Level}%`}
+              variant="success"
+              style={{
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: "0px",
+              }}
+              visuallyHidden
+            />
+          </div>
+        </foreignObject>
+        <foreignObject x="26%" y="45%" width="100" height="100">
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column-reverse",
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <ProgressBar
+              now={tankData.HT2Level}
+              label={`${tankData.HT2Level}%`}
+              variant="success"
+              style={{
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: "0px",
+              }}
+              visuallyHidden
+            />
+          </div>
+        </foreignObject>
+        <foreignObject x="64%" y="45%" width="100" height="100">
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column-reverse",
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <ProgressBar
+              now={tankData.HT3Level}
+              label={`${tankData.HT3Level}%`}
+              variant="success"
+              style={{
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: "0px",
+              }}
+              visuallyHidden
+            />
+          </div>
+        </foreignObject>
+        <foreignObject x="74.5%" y="45%" width="100" height="100">
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column-reverse",
+              transform: "rotate(-90deg)",
+            }}
+          >
+            <ProgressBar
+              now={tankData.HT4Level}
+              label={`${tankData.HT4Level}%`}
+              variant="success"
+              style={{
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: "0px",
+              }}
+              visuallyHidden
+            />
+          </div>
+        </foreignObject>
 
         <rect width={`${progress}%`} height="50" fill="blue" />
-        <text x="82%" y="62%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
-        {`${tankData.HT4Level}%`}
-      </text>
-        <text x="72%" y="62%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
-        {`${tankData.HT3Level}%`}
-      </text>
-        <text x="33%" y="62%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
-        {`${tankData.HT2Level}%`}
-      </text>
-        <text x="22.5%" y="62%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
-        {`${tankData.HT1Level}%`}
-      </text>
-        <text x="24%" y="8%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
-        {`${((tankData.m1Level * 100) / 5820).toFixed(2)}%`}
-      </text>
-        <text x="72.5%" y="8%" fontSize="16" fill="black" textAnchor="middle" dy=".3em">
-        {`${((tankData.m2Level * 100) / 5820).toFixed(2)}%`}
-      </text>
+        <text
+          x="82%"
+          y="62%"
+          fontSize="16"
+          fill="black"
+          textAnchor="middle"
+          dy=".3em"
+        >
+          {`${tankData.HT4Level}%`}
+        </text>
+        <text
+          x="72%"
+          y="62%"
+          fontSize="16"
+          fill="black"
+          textAnchor="middle"
+          dy=".3em"
+        >
+          {`${tankData.HT3Level}%`}
+        </text>
+        <text
+          x="33%"
+          y="62%"
+          fontSize="16"
+          fill="black"
+          textAnchor="middle"
+          dy=".3em"
+        >
+          {`${tankData.HT2Level}%`}
+        </text>
+        <text
+          x="22.5%"
+          y="62%"
+          fontSize="16"
+          fill="black"
+          textAnchor="middle"
+          dy=".3em"
+        >
+          {`${tankData.HT1Level}%`}
+        </text>
+        <text
+          x="24%"
+          y="8%"
+          fontSize="16"
+          fill="black"
+          textAnchor="middle"
+          dy=".3em"
+        >
+          {`${((tankData.m1Level * 100) / 5820).toFixed(2)}%`}
+        </text>
+        <text
+          x="72.5%"
+          y="8%"
+          fontSize="16"
+          fill="black"
+          textAnchor="middle"
+          dy=".3em"
+        >
+          {`${((tankData.m2Level * 100) / 5820).toFixed(2)}%`}
+        </text>
         {/* {console.log(tankData.HT4Level)} */}
       </svg>
-      <ProgressBar
-        className="HT4Level"
-        now={tankData.HT4Level}
-        label={`${tankData.HT4Level}%`}
-        variant="#00B050"
-        style={{
-          height: "2%",
-          width: "8%",
-          position: "absolute",
-          top: "50%",
-          zIndex: "10",
-          left: "73%",
-          transform: "rotate(-90deg)",
-        }}
-        visuallyHidden
-      />
-      <ProgressBar
-        className="HT3Level"
-        now={tankData.HT3Level}
-        label={`${tankData.HT3Level}%`}
-        variant="#00B050"
-        style={{
-          height: "2%",
-          width: "8%",
-          position: "absolute",
-          top: "50%",
-          zIndex: "10",
-          left: "64%",
-          transform: "rotate(-90deg)",
-        }}
-        visuallyHidden
-      />
-      <ProgressBar
-        className="HT2Level"
-        now={tankData.HT2Level}
-        label={`${tankData.HT2Level}%`}
-        variant="#00B050"
-        style={{
-          height: "2%",
-          width: "8%",
-          position: "absolute",
-          top: "50%",
-          zIndex: "10",
-          left: "31.5%",
-          transform: "rotate(-90deg)",
-        }}
-        visuallyHidden
-      />
-      <ProgressBar
-        className="HT1Level"
-        now={tankData.HT1Level}
-        label={`${tankData.HT1Level}%`}
-        variant="#00B050"
-        style={{
-          height: "2%",
-          width: "8%",
-          position: "absolute",
-          top: "50%",
-          zIndex: "10",
-          left: "22.5%",
-          transform: "rotate(-90deg)",
-        }}
-        visuallyHidden
-      />
-      <ProgressBar
-        className="m1Level"
-        now={(tankData.m1Level*100)/5820}
-        label={`${(tankData.m1Level*100)/5820}%`}
-        variant="#00B050"
-        style={{
-          height: "2%",
-          width: "8%",
-          position: "absolute",
-          top: "18%",
-          zIndex: "10",
-          left: "31%",
-          transform: "rotate(-90deg)",
-        }}
-        visuallyHidden
-      />
-      <ProgressBar
-        className="m2Level"
-        now={(tankData.m2Level*100)/5820}
-        label={`${(tankData.m2Level*100)/5820}%`}
-        variant="#00B050"
-        style={{
-          height: "2%",
-          width: "8%",
-          position: "absolute",
-          top: "18%",
-          zIndex: "10",
-          left: "59%",
-          transform: "rotate(-90deg)",
-        }}
-        visuallyHidden
-      />
+
     </div>
   );
 };

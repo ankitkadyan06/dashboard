@@ -1,73 +1,61 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.mGFDash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* margin-left: 15%; */
+  /* overflow: hidden; */
+/* } */
+
+/* svg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}  */
+
 .progress {
   --bs-progress-bg: #ffc000 !important;
   --bs-progress-border-radius: 0px !important;
-  
 }
 
 .progress-bar {
   --bs-progress-bar-bg: #00b050 !important;
 }
 
-@media (min-width: 1536px) {
-    .HT1Level {
-      left: 26.5% !important;
-      width:  7% !important;
-    }
+/* .progress-bars-container1,
+.progress-bars-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+} */
 
-    .HT2Level {
-        left: 34% !important;
-        width:  7% !important;
-    }
+.progress-bars-container1{
+  margin-left: 28.5%;
+  margin-top: 8%;
+}
+.progress-bars-container2{
+  margin-top: 15%;
+  margin-left: 28%;
+}
 
-    .HT3Level {
-        left: 61.5% !important;
-        width:  7% !important;
-    }
+.m2Level{
+  margin-left: -4.5%;
+}
 
-    .HT4Level {
-        left: 69% !important;
-        width:  7% !important;
-    }
+.HT2Level{
+  margin-left: -65%;
+}
 
-    .m1Level{
-        left: 27.5% !important;
-        width:  7% !important;
-    }
-    .m2Level{
-        left: 62% !important;
-        width:  7% !important;
-    }
-  }
+.HT3Level{
+  margin-left: -10%;
+}
 
-@media (min-width: 1920px) {
-    .HT1Level {
-      left: 23% !important;
-      width:  7% !important;
-    }
-
-    .HT2Level {
-        left: 32% !important;
-        width:  7% !important;
-    }
-
-    .HT3Level {
-        left: 64.5% !important;
-        width:  7% !important;
-    }
-
-    .HT4Level {
-        left: 73.5% !important;
-        width:  7% !important;
-    }
-
-    .m1Level{
-        left: 24% !important;
-        width:  7% !important;
-    }
-
-    .m2Level{
-        left: 65% !important;
-        width:  7% !important;
-    }
-    
-  }
+.HT4Level{
+  margin-left: -75%;
+}
